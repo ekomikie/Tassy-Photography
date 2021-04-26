@@ -1,0 +1,1064 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration:none;
+}
+
+body {
+  background-color: #0E0E0E;
+  font-family: 'Poppins', 'Roboto'sans-serif;
+
+}
+
+.dark-mode{
+  filter: invert(1) hue-rotate(360deg);
+  background-color: white;
+}
+
+.light-mode{
+  position: relative;
+}
+
+
+.invert{
+  filter: invert(1) hue-rotate(360deg);
+}
+
+/* NavBar */
+
+.main-nav {
+  background-color: #0E0E0E;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+
+
+.logo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:45px;
+  height: 45px;
+  cursor: pointer;
+  transition:all .5s ease-in-out;
+  border: 3px solid transparent;
+}
+
+.menu-btn_burger{
+  width: 32px;
+  height: 3px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 3px;
+  
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width:32px;
+height: 3px;
+background-color: #fff;
+  border-radius: 3px;
+  
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before{
+  transform: translateY(-10px);
+}
+
+.menu-btn_burger::after{
+  transform: translateY(10px);
+}
+
+.menu-btn.open .menu-btn_burger {
+   transform: translateX(-50px);
+   background: transparent;
+   box-shadow: none;
+ }
+
+.menu-btn.open .menu-btn_burger::before{
+   transform: rotate(45deg) translate(35px, -35px);
+ }
+
+.menu-btn.open .menu-btn_burger::after{
+transform: rotate(-45deg) translate(35px, 35px);
+}
+
+  
+
+
+.navlinks {
+  background-color: #0E0E0E;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  height: 100%;
+
+}
+
+.nav-item.active {
+  position: relative;
+ 
+}
+
+.dot {
+  display: none;
+}
+
+    /* Dark/Light Mode */
+.dark-toggle{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:200px;
+  z-index: 10;
+  margin: 0;
+  position: absolute;
+  bottom:-70px;
+  right: 10%;
+ 
+}
+
+.checkbox{
+  opacity:0;
+  position: absolute;
+}
+
+label{
+  background-color: #111;
+  display: flex;
+  border-radius: 50px;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  padding: 5px;
+  height:26px;
+  width:50px;
+}
+
+.ball {
+  background-color: #fff;
+  height: 22px; 
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  position:absolute;
+  width: 22px;
+  transition: transform 0.2s linear;
+  cursor: pointer;
+}
+
+.checkbox:checked + label .ball{
+  transform: translateX(24px);
+}
+
+    /* Hero Section */
+.parent-box {
+  position: relative;
+}
+
+.yellow-box{
+  display: none;
+}
+
+.hero-image{
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+}
+
+.hero-text {
+  
+  background-color: #0E0E0E;
+  box-shadow: 11px 4px 35px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  color: #fff;
+  bottom: -150px;
+  right: 11%;
+  margin: auto;
+  width: 80%;
+  font-family: 'Poppins';
+  text-align: center;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+}
+
+
+
+.hello {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.intro {
+  font-family: 'Poppins';
+  font-weight: lighter;
+  font-size: 24px;
+
+}
+
+.hero-description {
+  font-family: 'Poppins';
+  line-height: 2;
+  font-size: 16px;
+}
+
+.hero-button {
+  font-size: 14px;
+  font-family: 'Poppins';
+  background-color: #FA9b03;
+  animation-delay:2.5s;
+  animation-duration: 0.8s;
+  transition: transform 1s ease-in-out;
+  
+}
+
+.hero-button:hover{
+  border-color:#eb5e0b;
+  color: white;
+  box-shadow:0 0.5em 0.5em -0.4em #eb5e0b;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+}
+
+
+    /*Work Section  */
+
+.works-section {
+  margin-top: 160px;
+  position: relative;
+
+}
+
+.work-title {
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.work-dot {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  background-color: #FA9b03;
+  border-radius: 100%
+}
+
+.work-row {
+  font-family: 'Poppins';
+  font-size: 11px;
+  margin-top: 60px;
+}
+
+.first-col {
+
+  background-color: #FA9b03;
+  width: 60%;
+ 
+}
+
+
+div.second-col,
+div.third-col,
+div.fourth-col,
+div.fifth-col{
+  position: relative;
+  width: 60%;
+  z-index: 3;
+  transition: color 300ms ease-in-out;
+}
+
+div.second-col::before,
+div.third-col::before,
+div.fourth-col::before,
+div.fifth-col::before{
+  
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color:#FA9b03;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition: transform 300ms ease-in-out ;
+}
+
+
+div.first-col a,
+div.second-col a,
+div.third-col a,
+div.fourth-col a,
+div.fifth-col a{
+  text-decoration: none;
+  color: white;
+}
+
+div.second-col:hover::before,
+div.second-col:focus::before,
+div.third-col:hover::before,
+div.third-col:focus::before,
+div.fourth-col:hover::before,
+div.fourth-col:focus::before,
+div.fifth-col:hover::before,
+div.fifth-col:focus::before{
+transform: scaleX(1);
+}
+
+.contact-me-btn{
+position: relative;
+z-index: 3;
+transition: color 300ms ease-in-out;
+}
+
+
+.contact-me-btn:hover,
+.contact-me-btn:focus{
+color: white;
+}
+
+
+
+
+
+.image-width {
+  width: 100%;
+}
+
+.work-text {
+  line-height: 2;
+  font-family: 'Poppins';
+  font-size: 18px;
+}
+
+.last-box{
+  text-align: center;
+  font-family: 'Poppins';
+  font-size: 18px;
+  position: relative;
+  transition: transform 300ms ease-in-out;
+}
+
+.last-box::before{
+  content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+right: 0;
+height: 2px;
+background-color:#FA9b03;
+transition: transform 300ms ease-in-out;
+transform:scaleX(0);
+}
+
+.last-box:hover::before,
+.last-box:focus::before{
+  transform: scaleX(1);
+}
+
+
+
+
+.last-box a {
+  color: #FA9b03;
+  text-decoration: none;
+}
+
+/* About Me Section */
+
+.about-me, .contact-me-section {
+  background-color: rgba(24, 24, 24, 0.68);
+}
+
+.about-me-title {
+  position: relative;
+  font-family: 'Poppins';
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.about-dot {
+  position: absolute;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #FA9b03;
+  border-radius: 100%;
+}
+
+
+
+.about-image {
+  width: 100%;
+}
+
+.hire-me-btn{
+  background-color: #FA9b03;
+  transition: transform 0.23s ease-in-out;
+}
+
+.hire-me-btn:hover, .hire-me-btn:focus{
+  border-color:#eb5e0b;
+  color: white;
+  box-shadow:0 0.5em 0.5em -0.4em #eb5e0b;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+}
+
+    /* Reviews Section */
+
+.review-title{
+  font-family: 'Poppins';
+  width: 70%;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+ 
+
+.review-dot {
+  position: absolute;
+  
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #FA9b03;
+  border-radius: 100%;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot span{
+  border-radius: 3px;
+  width:12px;
+  height: 6px;
+ }
+
+ .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+   background: #FA9b03;
+ }
+
+ .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev,.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-next{
+   display: none;
+ }
+
+.no-display{
+  display: none;
+}
+
+.contact-sub-text{
+  display: none;
+}
+
+
+
+
+
+.feedback-text{
+  font-family: 'Poppins';
+ padding: 5px;
+ font-size: 13px;
+ position: relative;
+}
+
+.feedback-text .feedback-name{
+  font-family: 'Montserrat', sans-serif;
+  height: 50px;
+  width: 90%;
+  padding-left: 5px;
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+
+.num-area{
+  font-family: 'Poppins';
+  position: relative;
+}
+
+.num-area .num-box{
+  background-color:#FA9b03;
+ padding: 12px 5px;
+ font-family: 'Rubik', sans-serif;
+ font-size: 20px;
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.small-image{
+  position: absolute;
+  bottom:7%;
+  left: 22%;
+  
+}
+
+.line{
+  position: absolute;
+  bottom: 40px;
+  left:0px;
+  background-color: #fff;
+  height: 2px;
+  width: 30px;
+  
+}
+
+/* Contact Section */
+
+.myName, .myEmail, .message-area{
+  font-family: 'Poppins';
+  font-size: 17px;
+  background-color: black;
+  border-radius: 0;
+  margin: auto ;
+  width: 90%;
+  
+}
+
+.form-btn{
+  font-family: 'Poppins';
+  background-color:#FA9b03;
+  font-size: 1rem;
+  color: #fff;
+  margin: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.form-btn:hover{
+  border-color:#eb5e0b;
+  color: white;
+  box-shadow:0 0.5em 0.5em -0.4em #eb5e0b;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+}
+
+
+/* Contact Type Section */
+.contact-details-title{
+  font-family: 'Poppins';
+  font-weight: normal;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.message-icon{
+  border: 1px #FA9b03 solid ;
+  border-radius: 50%;
+  padding-top: 8px;
+  padding-left: 10px;
+  height: 45px;
+  width: 45px;
+}
+
+.contact-type{
+  color: #FA9b03;
+  font-family: 'Poppins';
+  font-size: 16px;
+  padding: 0;
+} */
+
+.contact-channel{
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 19px;
+}
+
+  .form-box{
+    background-color:#F2F4F7;
+    width:98%;
+  }
+  
+ 
+  
+
+.footer-area{
+  background-color: #181818;
+  
+  overflow: hidden;
+}
+
+.footer-text{
+  font-family: 'Poppins';
+  font-size:12px;
+}
+
+
+
+@media (min-width: 768px) {
+  .navlinks{
+    font-family: 'Poppins';
+    font-size: 17px;
+  }
+
+  .line-hov{
+    position: relative;
+    transition: transform 300ms ease-in-out;
+  }
+
+  .line-hov::before{
+    content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  background-color:#FA9b03;
+  transition: transform 300ms ease-in-out;
+transform:scaleX(0);
+  }
+
+  .line-hov:hover::before,
+  .line-hov:focus::before{
+    transform: scaleX(1);
+  }
+
+
+  
+
+  .mode-text{
+    display: none;
+  }
+
+  .dark-toggle{
+    
+    z-index: 10;
+    margin: 0;
+    position: absolute;
+    top:-80px;
+    right:-40px;
+    
+  }
+
+  .yellow-box{
+    display: block;
+    position: absolute;
+    background-color: #FA9b03;
+    width: 250px;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    z-index: -10;
+  }
+
+  
+
+  label{
+    background-color: #111;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    padding: 5px;
+    height:26px;
+    width:50px;
+  }
+  
+
+
+  
+  .checkbox{
+    opacity:0;
+    position: absolute;
+  }
+  
+  
+  
+  .ball {
+    background-color: #fff;
+    height: 22px; 
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    position:absolute;
+    width: 22px;
+    transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + label .ball{
+    transform: translateX(24px);
+  }
+
+  .home-link{
+    background-color: #0E0E0E;
+  }
+
+  
+  .dot {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    width: 6px;
+    height: 6px;
+    background-color: #FA9b03;
+    border-radius: 100%;
+  }
+
+
+ .parent-box{
+   position: static;
+  display:flex;
+  flex-direction: row-reverse;
+  
+  
+ 
+ }
+
+ .hero-image{
+   width: 100%;
+ }
+
+ .hero-text{
+  position: static;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+  padding-left: 4%;
+  
+  align-self: stretch;
+  
+  
+ }
+.hello{
+  margin-top: 40%;
+  
+  text-align: left;
+}
+
+.intro {
+  text-align: left;
+  
+}
+
+.hero-description{
+  text-align: left;
+}
+
+.works-section{
+  margin-top: 5%;
+}
+
+.work-title{
+  font-size:17px;
+}
+
+.work-row {
+  font-family: 'Poppins';
+  font-size: 16px;
+  margin-top: 40px;
+}
+ 
+.work-text{
+  font-size: 20px;
+  margin-bottom: 0;
+}  
+
+.last-box{
+  font-size: 17px;
+}
+
+
+.second-section{
+  padding: 0;
+  margin: 0;
+}
+
+.about-me{
+
+width: 100%;
+position: static;
+}
+
+.about-me-title{
+  background-color: #0E0E0E;
+  margin: 0 auto;
+  
+}
+.about-text{
+  
+  text-align: left;
+  font-size: 18px;
+}
+
+.mini-text {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.no-display{
+display: block;
+}
+.contact-sub-text{
+  display: block;
+  font-family: 'Poppins';
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: lighter;
+  color: #c4c4c4;
+}
+
+.hire-me-btn{
+  display:block;
+  margin: 0;
+  margin-left: 8px;
+  margin-top:40px ;
+}
+
+.message-area{
+  width: 95%;
+  border-radius: 6px;
+}
+
+.myName, .myEmail{
+  border-radius: 6px;
+    }
+
+    .media-icons .box a{
+      display: block;
+      position: relative;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      
+      color:#FA9b03;
+    
+    }
+    
+    .media-icons .box a span{
+        position: absolute;
+        transition: transform .5s;
+    }
+    
+    .media-icons .box a span:nth-child(1),
+    .media-icons .box a span:nth-child(3){
+      width: 100%;
+      height:1px;
+      background-color:#FA9b03;
+    
+    }
+    
+    .media-icons .box a span:nth-child(1){
+      top: 0;
+      left: 0;
+      transform-origin:right ;
+    }
+    
+    .media-icons .box a:hover span:nth-child(1){
+        transform: scaleX(0);
+         transform-origin: left;
+         transition: transform .5s;
+    }
+    
+    .media-icons .box a span:nth-child(3){
+      bottom: 0;
+      left: 0;
+      transform-origin:left;
+    }
+    
+    .media-icons .box a:hover span:nth-child(3){
+        transform: scaleX(0);
+         transform-origin: right;
+         transition: transform .5s;
+    }
+    
+    .media-icons .box a span:nth-child(2),
+    .media-icons .box a span:nth-child(4){
+      width: 1px;
+      height:100%;
+      background-color:#FA9b03;
+    
+    }
+    
+    .media-icons .box a span:nth-child(2){
+      top: 0;
+      left: 0;
+      transform: scaleY(0);
+      transform-origin:bottom ;
+    }
+    
+    .media-icons .box a:hover span:nth-child(2){
+        transform: scaleY(1);
+         transform-origin: top;
+         transition: transform .5s;
+    }
+    
+    .media-icons .box a span:nth-child(4){
+      top: 0;
+      right: 0;
+      transform: scaleY(0);
+      transform-origin:top;
+    }
+    
+    .media-icons .box a:hover span:nth-child(4){
+        transform: scaleY(1);
+         transform-origin: bottom;
+         transition: transform .5s;
+    }
+ 
+.footer-text{
+  
+  font-size:1rem;
+}
+    
+}
+
+
+@media (min-width: 992px) {
+
+  
+  .logo{
+    font-size: 1.6rem;
+    margin-left: 50px;
+  }
+
+  .navlinks{
+    font-size: 1.12rem;
+    
+  }
+
+  .hero-text {
+    box-shadow:none;
+  }
+
+  .hello{
+    font-size: 48px;
+    margin-top: 50%;
+    font-weight: bold;
+  }
+
+  .intro{
+    font-size: 3rem;
+    font-weight: lighter;
+  }
+
+  .hero-image{
+    position: relative;
+  }
+
+  .hero-description{
+    font-size: 30px;
+    line-height: 1.5;
+  }
+
+  .hero-button{
+    
+    /* display:block; */
+    font-size: 25px;
+    
+    padding-top: 30px;
+  }
+
+  
+
+  .work-dot{
+    top: 100px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .work-title > h5{
+    font-size:40px;
+  }
+
+  .work-row {
+    font-family: 'Poppins';
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  .work-text{
+    padding: 0;
+    font-size: 19px;
+    line-height: 1.3;
+    
+  }
+
+  .last-box{
+  
+    font-size: 1.5rem;
+    padding-top: 20px;
+    width: 10%;
+  }
+
+  .about-me-title{
+    font-size: 35px;
+   
+  }
+
+  .about-dot {
+    width: 12px;
+    height: 12px;
+    
+  }
+
+  .about-text{
+    margin-top: 14%;
+    font-size: 1.25rem;
+  }
+  .mini-text{
+    font-size: 1.5rem;
+  }
+
+  .hire-me-btn{
+    font-size: 18px;
+    
+  }
+
+  
+
+  .review-title{
+    font-size: 2.2rem;
+  }
+
+  .review-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+ 
+  .main-line{
+    position: relative;
+  }
+
+  .div-line{
+    position: absolute;
+    color: white;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height:40px;
+  }
+  
+
+  .form-btn{
+    font-size: 1.56rem;
+  }
+
+  }
